@@ -24,4 +24,8 @@ def predict():
 
     output = round(prediction[0], 2)
 
-    return render_template('index.html', prediction_text= "Percent with heart disease")
+    return render_template('index.html', prediction_text= 'Percent with heart disease is {}'.format(output))
+
+# this line executes the file and provides the link to deployment server
+if __name__ == "__main__":
+    app.run()
